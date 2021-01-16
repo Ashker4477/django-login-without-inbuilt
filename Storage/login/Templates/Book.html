@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Register book</title>
+</head>
+<body>
+<h1>welcome</h1>
+{% for i in name %}
+<h3><img src="{{i.img.url}}"></h3><br>
+<ul>
+    <li><h3>{{i.fn}}</h3></li>
+    <li><h3> {{i.ln}}</h3></li>
+    <li><h3>{{i.em}}</h3></li>
+    <li><h3>{{i.Dob}}</h3></li>
+</ul>
+{% endfor %}
+</body>
+</html>

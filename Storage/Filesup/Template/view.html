@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>View</title>
+</head>
+<body>
+{% for i in name %}
+{{i.Fullname}}
+<img src="{{i.Profile.url}}"><br>
+{% endfor %}
+
+</body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<script>
+
+    function validateForm(){
+        var x = document.getElementById("nam").value;
+        var y = document.getElementById("file").value;
+        if (x==""){
+           alert("Name is empty")
+           return false;
+        }
+        if (y==""){
+           alert("File is empty")
+           return false;
+        }
+    }
+</script>
+<head>
+    <meta charset="UTF-8">
+    <title>Fileup</title>
+</head>
+<body>
+<form enctype="multipart/form-data"  method="post" action="Success" onsubmit="return validateForm()">{% csrf_token %}
+    <center>
+        <label for="name">FullName:</label>
+        <input type="text" name="name" id="name" placeholder="enter name" >
+    </center>
+    <center>
+        <label for="file">Choose Profile:</label>
+         <input type="file" name="file"  id="file">
+    </center>
+    <center>
+         <button type="submit">Upload</button>
+    </center>
+
+</form>
+</body>
+</html>

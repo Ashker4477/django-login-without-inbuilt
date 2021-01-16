@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Register</title>
+    <script>
+function validateForm() {
+  var x = document.forms["myForm"]["fn"].value;
+  var y = document.forms["myForm"]["ln"].value;
+  var z = document.forms["myForm"]["em"].value;
+  var w = document.forms["myForm"]["Dob"].value;
+
+  if (x == "") {
+    alert("first Name must be filled out");
+    return false;
+  }
+
+  if (y == "") {
+    alert("last Name must be filled out");
+    return false;
+  }
+
+  if (z == "") {
+    alert("email must be filled out");
+    return false;
+  }
+
+  if (w == "") {
+    alert("dob must be filled out");
+    return false;
+  }
+}
+</script>
+</head>
+<body>
+<form action="success" name="myForm" method="post" onsubmit="return validateForm()" enctype="multipart/form-data">
+    {% csrf_token%}
+    <center>
+        <label for="f">First Name:</label>
+        <input type="text" name="fn" id="f"><br></center>
+    <center>
+        <label for="l">Last Name:</label>
+        <input type="text" name="ln" id="l"><br></center>
+    <center>
+        <label for="em">Email:</label>
+        <input type="email" name="em" id="em"><br></center>
+    <center>
+        <label for="dob">Date of birth:</label>
+        <input type="date" name="Dob" id="dob"><br></center>
+    <center>
+        <label for="img">Image:</label>
+        <input type="file" name="img" id="img">
+    </center>
+    <center>
+        <input type="submit" ></center>
+
+</form>
+</body>
+</html>

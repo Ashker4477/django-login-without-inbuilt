@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+{% load static %}
+<head>
+    <title>Login</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="{% static 'styles/bootstrap4/bootstrap.min.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'styles/main_styles.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'styles/responsive.css' %}">
+    <script src="{% static 'js/jquery-3.2.1.min.js' %}"></script>
+    <script src="{% static 'styles/bootstrap4/popper.js' %}"></script>
+    <script src="{% static 'styles/bootstrap4/bootstrap.min.js' %}"></script>
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+    <style>
+ #a{
+   background-color:skyblue; margin: auto; width: 50%;border: 3px solid green;padding: 70px 0;text-align: center;
+ }
+ #user{
+        margin-bottom : 10px ; }
+ #psw{
+
+        margin-bottom : 10px ;}
+ #btn{
+    padding: 3px;
+    min-width:100px;}
+</style>
+</head>
+<body>
+<div class="jumbotron">
+    <div class="container" id="a" >
+        <form method="post" action="user">{% csrf_token %}
+            <center>
+                <input type="text" name="user" id="user" placeholder="Username">
+            </center>
+            <center>
+                <input type="password" name="psw" id="psw" placeholder="Password">
+            </center>
+            <center>
+                <button type="submit" name="btn" id="btn">Login</button>
+            </center>
+            <a href="{% url 'signUp' %}" id="hyp"><u>Sign Up</u></a>
+        </form>
+    </div>
+</div>
+</body>
+</html>

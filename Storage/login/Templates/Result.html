@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+{% csrf_token %}
+<head>
+    <meta charset="UTF-8">
+    <title>Result</title>
+</head>
+<body>
+<h1>Welcome</h1>
+
+
+    {% for i in name %}
+        <li>
+               {{i.fn}}.....{{i.ln}}.....{{i.em}}.....{{i.Dob}}
+        </li>
+    {% endfor %}
+
+</body>
+</html>

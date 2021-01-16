@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html>
+
+ <head>
+   <title>Registration form</title>
+   <style>
+       body {background-color:lightblue;}
+
+       h1{  color: yellow;
+            border: 5px solid black;
+            font-size: 50px;
+            margin: 50;
+            background-color:blue ;
+            text-align:center ; }
+        #n{color: yellow;
+            border: 5px solid black;
+            font-size: 50px;
+            margin: 0px 0px 50px 0px ;
+            color:yellow
+            background-color:blue ;
+            text-align:center ;
+            }
+       .m1{  background-color:yellow;
+                  color: black;
+                  text-align: center;
+                  border: 5px solid green;
+                 }
+       .m2,.m3,.m4,.m5,.m6,.m7,.m8,.m9,.m10,.m11,.m12,.Sub{ background-color:yellow;
+                  color: black;
+                  text-align: center;
+                  border: 5px solid green;
+                 margin:0px 0px 20px 0px }
+
+       #fname{  background-color:lightblue;
+                margin:20px 0px 20px 24px}
+
+       #lname{  background-color:lightblue;
+                margin:0px 0px 20px 24px }
+
+       #Ag{    margin: 20px  0px 20px 45px}
+
+       #Sex{    margin: 20px 0px 20px 48px}
+
+       #Ag,#Sex{background-color: lightblue;
+                  color: black;
+                  text-align: center;}
+
+       #DOB{background-color: lightblue;
+                  color: black;
+                  text-align: center;
+             margin:20px 0px 20px 38px}
+
+       #em{background-color: lightblue;
+                  color: black;
+                  text-align: center;
+                  margin:20px 0px 20px 36px  }
+
+       #Addr{background-color: lightblue;
+                  color: black;
+                  text-align: center;
+                  margin:20px 0px 20px 19px  }
+
+       #Country{  background-color: lightblue;
+                  color: black;
+                  text-align: center;
+                  margin:20px 0px 20px 25px }
+
+       #State{background-color: lightblue;
+                  color: black;
+                  text-align: center;
+                  margin:20px 0px 20px 40px }
+
+       #Dist{background-color: lightblue;
+                  color: black;
+                  text-align: center;
+                  margin:20px 0px 20px 24px}
+
+      #pin{background-color: lightblue;
+                  color: black;
+                  text-align: center;
+                  margin:20px 0px 20px 24px}
+
+      #city,#submit{background-color: lightblue;
+                  color: black;
+                  text-align: center;
+                  margin:20px 0px 20px 48px}
+   </style>
+ </head>
+   <body>
+
+     <nav id="n">
+         <a href="/html/">Home</a> |
+           <a href="/css/">Admission</a> |
+           <a href="/js/">Contact us</a> |
+           <a href="/python/">Python</a>
+       </nav>
+
+     <h1>Register</h1>
+       <form action="home" method="post">
+           {% csrf_token %}
+         <div class="m1">
+          <label for="fname">First Name: </label> 
+          <input type="text" id="fname" name="fname" size="50" placeholder="FIRST NAME">
+        <br>
+       
+          <label for="lname">Last Name:</label>         
+          <input type="text" id="lname" name="lname" size="50" placeholder="Last Name">
+        </div><br>
+         <div class="m2">
+          <label for="Ag">Age:</label>
+          <input type="number" id="Ag" name="Age" size="50" placeholder="Age"><br>
+          </div>
+         <div class="m3">
+          <label for="Sex">Sex:</label>
+          <select name="sex" id="Sex" >
+    	   <option value="Male">Male</option>
+    	   <option value="Female">Female</option>
+           </select>
+         </div>
+         
+         <div class="m4">
+          <label for="DOB">DOB:</label>
+          <input type="date" id="DOB"  name="DOB" ><br>
+         </div >
+
+        <div class="m5">
+          <label for="em">email:</label>
+          <input type="email" id="em" size="50" placeholder="Email" name="em" ><br>
+         </div>
+        <div class="m6">
+          <label for="Addr">Address:</label>
+          <input type="text" name="address" id="Addr" size="50"><br>
+        </div>
+        <div class="m7">
+          <label for="Country">Country</label>
+          <select  name="Country" id="Country">
+            <option value="INDIA">INDIAN</option>
+            <option value="NON-INDIAN">OTHERS</option>
+          </select><br>
+         </div>
+        <div class="m8">
+          <label for="State">State:</label>
+          <input type="text" id="State" size="50" placeholder="State" name="State"><br>
+        </div>
+            <div class="m9">
+          <label for="Dist">District:</label>
+          <input type="text" id="Dist" size="50" placeholder="District" name="District"><br>
+           </div >
+          <div class="m10">
+          <label for="pin">Pincode</label>
+          <input type="number" id="pin" size="50" placeholder="Pincode" name="Pincode"><br>
+          </div>
+          <div class="m11">
+          <label for="city">city:</label>
+          <input type="text" id="city" size="50"  placeholder="city" name="city">
+          </div>
+          <div class="Sub">
+            <input type ="Submit" value="Submit"  id="submit">
+           </div>
+        </form>
+   </body>
+</html>

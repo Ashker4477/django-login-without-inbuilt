@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<title>Login</title>
+<style>
+    #btn1{
+             padding:20px;
+             margin-top:20px;
+    }
+    #btn2{
+             padding:20px;
+             margin-top:20px;
+    }
+    #btn3{
+             padding:20px;
+             margin-top:20px;
+    }
+</style>
+</head>
+
+<form action="Register" method="post">
+{% csrf_token %}
+    <center><button type="submit" name='reg' id="btn1" value='btn1'>Register</button></center>
+ </form>
+<form action="Book" method="post">
+{% csrf_token %}
+    <center><button type="submit" name='book' id="btn2" value='btn2'>RegisterBook</button></center>
+</form>
+<form action="Search" method="post">{% csrf_token %}
+    <center>
+       <button id="btn3" name="Search btn"  value="bnt3">Search btn</button>
+    </center>
+</form>
+
+</body>
+</html>
